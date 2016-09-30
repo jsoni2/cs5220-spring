@@ -7,15 +7,13 @@
   <name>CS520 Spring Examples</name>
   <url>http://sun.calstatela.edu/</url>
   <properties>
-    <java-version>1.6</java-version>
-    <spring.version>3.0.5.RELEASE</spring.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>${spring.version}</version>
+        <version>4.3.2.RELEASE</version>
         <exclusions>
             <exclusion>
                 <groupId>commons-logging</groupId>
@@ -26,12 +24,12 @@
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-log4j12</artifactId>
-        <version>1.6.1</version>
+        <version>1.7.21</version>
     </dependency>
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
-        <version>1.6.1</version>
+        <version>1.7.21</version>
     </dependency>
   </dependencies>
   <build>
@@ -42,8 +40,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>2.3.2</version>
         <configuration>
-          <source>${java-version}</source>
-          <target>${java-version}</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
     </plugins>

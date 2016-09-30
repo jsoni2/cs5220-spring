@@ -1,6 +1,6 @@
 package cs520.spring.aop;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LogTest {
@@ -23,13 +23,15 @@ public class LogTest {
 
     public static void main( String[] args )
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext(
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
             "aop.xml" );
 
         LogTest test = (LogTest) context.getBean( "logTest" );
         test.getTask().doSomething();
         test.getTask().doSomethingElse();
         test.getTask().hello();
+
+        context.close();
     }
 
 }
